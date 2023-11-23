@@ -11,12 +11,8 @@
   "author": "Munajat Ibnu",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1",
     "express": "^4.17.1",
-    "fs": "0.0.1-security",
     "http": "0.0.1-security",
-    "pusher": "^4.0.2",
-    "request": "^2.88.2",
     "socket.io": "^4.7.2"
   },
   "devDependencies": {
