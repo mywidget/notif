@@ -6,7 +6,7 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 
 const hostname = '0.0.0.0';
-const port = 8890;
+const port = 8443;
 
 // app.get('/', (req, res) => {
 	// res.send('<h1>Hello world</h1>');
@@ -23,8 +23,12 @@ io.on("connection", function (socket) {
 	socket.on('load_antrian', (data) => {
         io.emit('load_antrian', data)
 	})
+		 
 	socket.on('data_refresh', (data) => {
         io.emit('data_refresh', data)
+	})
+	socket.on('start_kbm', (data) => {
+        io.emit('start_kbm', data)
 	})
 	socket.on('stop_kbm', (data) => {
         io.emit('stop_kbm', data)
